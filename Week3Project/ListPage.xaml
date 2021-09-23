@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Week3Project.ListPage">
+   
+        <ListView x:Name="myList"
+                  ItemSelected="myList_ItemSelected"
+                  >
+
+           <ListView.ItemTemplate>
+               <DataTemplate>
+
+                   <ViewCell>
+                       <StackLayout Orientation="Horizontal" Padding="4">
+                       <StackLayout Orientation="Horizontal"
+                                    
+                                   HorizontalOptions="StartAndExpand"
+                                    >
+                           <Image Source="{Binding imageURL}"></Image>
+                           <Label Text="{Binding name}"></Label>
+                           </StackLayout>
+                          
+                           <Button Text="Call" />
+                            </StackLayout>
+                      <ViewCell.ContextActions>
+                            <MenuItem Text="Call" CommandParameter="{Binding .}"
+                                      Clicked="CallMenuItem_Clicked"></MenuItem>
+                             <MenuItem Text="Delete"
+                                       CommandParameter="{Binding .}"
+                                       Clicked="DeleteMenuItem_Clicked"
+                                       IsDestructive="True"></MenuItem>
+
+                        </ViewCell.ContextActions>
+                           
+                   </ViewCell>
+                    <!--<ImageCell Text="{Binding name}"
+                                Detail="{Binding number}"
+                               ImageSource="{Binding imageURL}"
+                              >
+                        <ImageCell.ContextActions>
+                            <MenuItem Text="Call" CommandParameter="{Binding .}"
+                                      Clicked="CallMenuItem_Clicked"></MenuItem>
+                             <MenuItem Text="Delete"
+                                       CommandParameter="{Binding .}"
+                                       Clicked="DeleteMenuItem_Clicked"
+                                       IsDestructive="True"></MenuItem>
+
+                        </ImageCell.ContextActions>
+
+                    </ImageCell>-->
+               </DataTemplate>
+
+           </ListView.ItemTemplate>
+            
+
+        </ListView>
+
+</ContentPage>
