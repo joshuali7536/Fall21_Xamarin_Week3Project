@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ViewCell
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Week3Project.dateCell">
+      <StackLayout Orientation="Horizontal">
+        <Label Text="{Binding mylabel}" VerticalOptions="Center"
+               TextColor="{Binding mylabelColor}"
+
+               HorizontalOptions="StartAndExpand"/>
+
+                          
+       <DatePicker Date="27 Sep 2021"/>
+                        </StackLayout>
+</ViewCell>

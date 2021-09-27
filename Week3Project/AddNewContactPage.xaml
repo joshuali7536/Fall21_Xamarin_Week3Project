@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns:local="clr-namespace:Week3Project"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Week3Project.AddNewContactPage"
+    BackgroundColor="Beige"
+    >
+   
+    <StackLayout>
+
+        <local:myButton/>
+
+        <local:myButton/>
+
+        <local:myButton/>
+
+        <TableView>
+            <TableRoot>
+                <TableSection>
+                           <TextCell Text="Enter Your Info">
+                    </TextCell>
+                    <ImageCell Text="Seneca" Detail="College"
+                        ImageSource="https://images.freeimages.com/images/small-previews/d1f/balloon-contest-1417733.jpg"
+  ></ImageCell>
+
+                    <EntryCell Placeholder="Email"></EntryCell>
+                    <SwitchCell Text="Notification" On="True" ></SwitchCell>
+                </TableSection>
+                <TableSection>
+                   <local:dateCell mylabel="start" mylabelColor="red"/>
+                   <local:dateCell mylabel="end" mylabelColor="Green"/>
+                </TableSection>
+            </TableRoot>
+
+        </TableView>
+</StackLayout>
+           
+
+</ContentPage>
